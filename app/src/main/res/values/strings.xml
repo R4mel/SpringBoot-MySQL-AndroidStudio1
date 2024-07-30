@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">spring-mysql_ex</string>
+    <string name="form_ID">id</string>
+    <string name="form_password">password</string>
+    <string name="form_name">name</string>
+    <string name="form_age">age</string>
+    <string name="button_save_user">save</string>
+</resources>
