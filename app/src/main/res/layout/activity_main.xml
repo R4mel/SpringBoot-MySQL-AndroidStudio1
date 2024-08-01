@@ -1,54 +1,121 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="25dp"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Top Text -->
+    <TextView
+        android:id="@+id/top_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/TopText"
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Circle with Step Count -->
+    <RelativeLayout
+        android:id="@+id/circle_layout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/top_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_background">
+
+        <TextView
+            android:id="@+id/step_count"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/form_textFieldID"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/form_ID"/>
+            android:layout_centerInParent="true"
+            android:text="@string/_0"
+            android:textSize="48sp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/form_textFieldPassword"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/form_password"/>
+    <ImageView
+        android:id="@+id/heart_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/circle_layout"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="200dp"
+        android:layout_toEndOf="@id/circle_layout"
+        android:contentDescription="@string/heart_icon"
+        android:src="@drawable/ic_heart" />
 
+    <ImageView
+        android:id="@+id/egg_image"
+        android:layout_width="95dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/circle_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:contentDescription="@string/egg_image"
+        android:src="@drawable/ic_egg" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/form_textFieldName"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/form_name"/>
+    <!-- Bottom Text -->
+    <TextView
+        android:id="@+id/bottom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/egg_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/BottomText"
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/form_textFieldAge"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/form_age"/>
-    </LinearLayout>
-
-
-    <com.google.android.material.button.MaterialButton
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/button_save_user"
-        android:id="@+id/form_buttonSave"
-        android:minHeight="60dp">
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    </com.google.android.material.button.MaterialButton>
+        <ImageView
+            android:id="@+id/nav_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_character"
+            android:contentDescription="@string/character_icon" />
+
+        <ImageView
+            android:id="@+id/nav_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_friend"
+            android:contentDescription="@string/friend_icon" />
+
+        <ImageView
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/home_icon" />
+
+        <ImageView
+            android:id="@+id/nav_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/record_icon"
+            android:src="@drawable/ic_record" />
+
+        <ImageView
+            android:id="@+id/nav_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_my"
+            android:contentDescription="@string/my_icon" />
+    </LinearLayout>
 </RelativeLayout>

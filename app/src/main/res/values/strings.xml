@@ -5,4 +5,14 @@
     <string name="form_name">name</string>
     <string name="form_age">age</string>
     <string name="button_save_user">save</string>
+    <string name="heart_icon">Heart Icon</string>
+    <string name="_0">0</string>
+    <string name="TopText">당신의 캐릭터와 함께 걸어보세요 !</string>
+    <string name="egg_image">Egg Image</string>
+    <string name="BottomText">어떤 캐릭터가 태어날까요?</string>
+    <string name="character_icon">Character Icon</string>
+    <string name="friend_icon">Friend Icon</string>
+    <string name="home_icon">Home Icon</string>
+    <string name="record_icon">Record Icon</string>
+    <string name="my_icon">My Icon</string>
 </resources>
